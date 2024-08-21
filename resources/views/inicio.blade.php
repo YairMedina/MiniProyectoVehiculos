@@ -20,12 +20,12 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="image-text-section">
-                <h2 class="display-4 text-center">"RENTA DE VEHICULOS"</h2><br>
+                <h2 class="display-4 text-center">"VEHICLE RENTAL"</h2><br>
                     <img src="{{ asset('images/mustang.jpeg') }}" alt="Imagen descriptiva" class="img-fluid">
                     <div class="text-content">
                         
                         <p class="lead">
-                        ¡Aprovecha nuestra gran oferta en renta de vehículos! Obtén un 30% de descuento en todos nuestros autos. Disponemos de una flota de vehículos nuevos y bien mantenidos, ideales para cualquier tipo de viaje. Nuestra reserva es fácil y rápida, ya sea en línea o por teléfono. Esta oferta es válida hasta el 31 de agosto, así que no pierdas la oportunidad de viajar con comodidad y seguridad. Visítanos en VehiculosDeportivos.com o llámanos al 123-456-7890 para hacer tu reserva. Elige nuestros autos modernos y confiables, disfruta de precios competitivos y recibe un servicio al cliente excepcional. ¡No esperes más y da el primer paso hacia una experiencia de viaje sin preocupaciones!
+                        Take advantage of our great vehicle rental offer! Get a 30% discount on all our cars. We have a fleet of new and well-maintained vehicles, perfect for any type of trip. Our booking process is easy and quick, whether online or by phone. This offer is valid until August 31st, so don't miss the chance to travel with comfort and safety. Visit us at VehiculosDeportivos.com or call us at 123-456-7890 to make your reservation. Choose our modern and reliable cars, enjoy competitive prices, and receive exceptional customer service. Don't wait any longer and take the first step toward a worry-free travel experience!
                         </p>
                     </div>
                 </div>
@@ -41,8 +41,8 @@
                     <div class="card">
                         <img src="{{ asset('images/deportivos.jpg') }}" class="card-img-top vehicle-img" alt="Ferrari">
                         <div class="card-body">
-                            <h5 class="card-title">DEPORTIVOS</h5>
-                            <p class="card-text">Los coches deportivos son vehículos diseñados para ofrecer un alto rendimiento, velocidad y una experiencia de conducción emocionante. A menudo cuentan con motores potentes, una suspensión afinada para un manejo preciso y una estructura ligera para mejorar la agilidad. Su diseño suele ser aerodinámico para minimizar la resistencia al aire y maximizar la estabilidad a altas velocidades.</p>
+                            <h5 class="card-title">SPORTS</h5>
+                            <p class="card-text">Sports cars are vehicles designed to deliver high performance, speed, and an exciting driving experience. They often feature powerful engines, finely tuned suspension for precise handling, and a lightweight structure to enhance agility. Their design is usually aerodynamic to minimize air resistance and maximize stability at high speeds.</p>
                         </div>
                     </div>
                 </div>
@@ -50,8 +50,8 @@
                     <div class="card">
                         <img src="{{ asset('images/camioneta.jpeg') }}" class="card-img-top vehicle-img" alt="Motocicleta">
                         <div class="card-body">
-                            <h5 class="card-title">TODO TERRENO</h5>
-                            <p class="card-text">Estos vehículos suelen tener una mayor altura al suelo, lo que les permite superar obstáculos como rocas y troncos sin dañar el chasis. La tracción en las cuatro ruedas (4x4) es una característica común en los coches todo terreno, mejorando la capacidad de agarre y control en superficies resbaladizas o irregulares. Además, suelen contar con suspensiones reforzadas y neumáticos diseñados específicamente para soportar el desgaste y ofrecer tracción en condiciones adversas.</p>
+                            <h5 class="card-title"> ALL-TERRAIN</h5>
+                            <p class="card-text">These vehicles typically have higher ground clearance, allowing them to overcome obstacles such as rocks and logs without damaging the chassis. Four-wheel drive (4x4) is a common feature in off-road vehicles, enhancing grip and control on slippery or uneven surfaces. Additionally, they often come equipped with reinforced suspensions and tires specifically designed to withstand wear and provide traction in adverse conditions.</p>
                         </div>
                     </div>
                 </div>
@@ -59,9 +59,9 @@
                     <div class="card">
                         <img src="{{ asset('images/suburban.jpg') }}" class="card-img-top vehicle-img" alt="Camión">
                         <div class="card-body">
-                            <h5 class="card-title">EJECUTIVOS</h5>
+                            <h5 class="card-title">EXECUTIVE</h5>
                             <p class="card-text">
-                            Los coches ejecutivos están diseñados para ofrecer una combinación de lujo, confort y rendimiento, destinados principalmente a profesionales y ejecutivos que valoran la comodidad y el prestigio en su transporte diario. Estos vehículos suelen presentar un diseño elegante y sofisticado, con acabados de alta calidad y tecnología avanzada.</p>
+                            Executive cars are designed to offer a combination of luxury, comfort, and performance, primarily intended for professionals and executives who value both comfort and prestige in their daily transportation. These vehicles often feature an elegant and sophisticated design, with high-quality finishes and advanced technology.</p>
                         </div>
                     </div>
                 </div>
@@ -71,14 +71,14 @@
 
     <section id="services" class="services-section text-center">
         <div class="container">
-            <h2 class="display-4">RENTAS DEL MES</h2><br>
+            <h2 class="display-4">Monthly Rentals</h2><br>
             <div class="row">
                 <div class="col-md-4">
                     <div class="card mb-4">
                         <img src="{{ asset('images/shelby.jpg') }}" class="card-img-top" alt="SUV">
                         <div class="card-body">
                             <h5 class="card-title">SHELBY</h5>
-                            <p class="card-text">Robusto y potente, ideal para quienes buscan una experiencia de conducción emocionante y un diseño distintivo.</p>
+                            <p class="card-text">Robust and powerful, ideal for those seeking an exciting driving experience and a distinctive design.</p>
                         </div>
                     </div>
                 </div>
@@ -87,7 +87,7 @@
                         <img src="{{ asset('images/ferrari2.jpg') }}" class="card-img-top" alt="Sedán">
                         <div class="card-body">
                             <h5 class="card-title">FERRARI</h5>
-                            <p class="card-text">Impresionante y emocionante en cada detalle. Ideal para quienes buscan una experiencia de conducción inigualable y un diseño icónico.</p>
+                            <p class="card-text">Impressive and thrilling in every detail. Ideal for those seeking an unparalleled driving experience and an iconic design.</p>
                         </div>
                     </div>
                 </div>
@@ -96,7 +96,7 @@
                         <img src="{{ asset('images/maserati.jpg') }}" class="card-img-top" alt="Camioneta">
                         <div class="card-body">
                             <h5 class="card-title">MASERATI</h5>
-                            <p class="card-text">Elegante y potente. Perfecto para una conducción deportiva de lujo y experiencias de alta gama.</p>
+                            <p class="card-text">Elegant and powerful. Perfect for luxury sports driving and high-end experiences.</p>
                         </div>
                     </div>
                 </div>
@@ -107,26 +107,27 @@
     <!-- Sección de Contacto -->
     <section id="contact" class="contact-section bg-light text-center">
         <div class="container">
-            <h2 class="display-4">Contáctanos</h2>
-            <p class="lead">¿Tienes alguna pregunta? No dudes en ponerte en contacto con nosotros.</p>
+            <h2 class="display-4">Contact Us</h2>
+            <p class="lead">¿
+            "Do you have any questions? Feel free to contact us.".</p>
             <form>
                 <div class="row">
                     <div class="col-md-6">
                         <div class="mb-3">
-                            <label for="name" class="form-label">Nombre</label>
-                            <input type="text" class="form-control" id="name" placeholder="Tu nombre">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Name">
                         </div>
                         <div class="mb-3">
-                            <label for="email" class="form-label">Correo Electrónico</label>
-                            <input type="email" class="form-control" id="email" placeholder="Tu correo electrónico">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="Email">
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="mb-3">
-                            <label for="message" class="form-label">Mensaje</label>
-                            <textarea class="form-control" id="message" rows="4" placeholder="Tu mensaje"></textarea>
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" rows="4" placeholder="Message"></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
                     </div>
                 </div>
             </form>

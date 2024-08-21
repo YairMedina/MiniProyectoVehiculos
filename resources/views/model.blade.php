@@ -29,13 +29,13 @@
             </tr>
         </thead>
         <tbody>
-            @foreach($modelos as $modelo )
+            @foreach($models as $model )
             <tr>
-                <th>{{ $modelo->id }}</th>
-                <th>{{ $modelo->nombre }}</th>
-                <th>{{ $modelo->año }}</th>
-                <th>{{ $modelo->color }}</th>
-                <th>{{ $modelo->cilindros }}</th>
+                <th>{{ $model->id }}</th>
+                <th>{{ $model->name }}</th>
+                <th>{{ $model->year }}</th>
+                <th>{{ $model->color }}</th>
+                <th>{{ $model->cylinders }}</th>
             </tr>
             @endforeach
         </tbody>

@@ -8,11 +8,12 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="image-text-section">
-                <h2 class="display-3 text-center">"ROLES ADMINISTRATIVOS"</h2><br>
+                <h2 class="display-3 text-center">"ADMINISTRATIVE ROLES"</h2><br>
                     <div class="text-content">
                         
                         <p class="lead">
-                        El Módulo de Roles de Usuario es una herramienta en nuestra página web que te permite gestionar qué pueden hacer los usuarios dentro de la plataforma. Los roles definen las diferentes responsabilidades y permisos de los usuarios. Por ejemplo, algunos usuarios pueden tener acceso completo para administrar el contenido, mientras que otros solo pueden visualizar información.
+                       
+The User Roles Module is a tool on our website that allows you to manage what users can do within the platform. Roles define the various responsibilities and permissions of users. For example, some users may have full access to manage content, while others may only be able to view information.
                         </p>
                     </div>
                 </div>
@@ -21,12 +22,12 @@
     </div>
 
 <div class="container">
-    <h1 class="text-center">Usuarios</h1>
+    <h1 class="text-center">Users</h1>
     <table class="table table-striped">
         <thead>
             <tr>
                 <th>ID</th>
-                <th>Nombre</th>
+                <th>Name</th>
                 <th>Email</th>
                 <th></th>
              
@@ -40,7 +41,7 @@
                 <th>{{ $use->name }}</th>
                 <th>{{ $use->email }}</th>
                 <th> <div class="container">
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-id="{{ $use->id }}" onclick="abrirModal(this)">Permisos</button>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-id="{{ $use->id }}" onclick="abrirModal(this)">Permissions</button>
     </div></th>
             </tr>
 
@@ -58,7 +59,7 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Asignar Roles</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Assign Roles</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -68,8 +69,8 @@
       <input type="text" class="form-control" id="idrol" placeholder="Ingresa Rol">
     </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-        <button type="button" class="btn btn-primary" onclick="asignarPermiso()">Guardar</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" onclick="asignarPermiso()">Save</button>
         
       </div>
     </div>

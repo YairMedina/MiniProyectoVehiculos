@@ -9,25 +9,25 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="image-text-section">
-                <h2 class="display-3 text-center">"HISTORIAL DE CLIENTES"</h2><br>
+                <h2 class="display-3 text-center">"CUSTOMER HISTORY"</h2><br>
                     <div class="text-content">
                         
                         <p class="lead">
-                        Un Módulo de Clientes en una plataforma de renta de vehículos es una sección especializada del sistema que gestiona toda la información y las interacciones relacionadas con los clientes que utilizan el servicio de alquiler de vehículos. Este módulo es fundamental para proporcionar un buen servicio al cliente, organizar la gestión de reservas y mantener un registro detallado de las transacciones.
+                        A Customer Module in a vehicle rental platform is a specialized section of the system that manages all information and interactions related to customers using the vehicle rental service. This module is crucial for providing good customer service, organizing reservation management, and maintaining a detailed record of transactions.
                         </p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <h1 class="text-center">Listado de Clientes</h1>
+    <h1 class="text-center">"Customer List"</h1>
     <table class="table table-striped">
         <thead>
             <tr>
                 <th>ID</th>
-                <th>Nombre</th>
-                <th>Telefono</th>
-                <th>Sexo</th>
+                <th>Name</th>
+                <th>Phone</th>
+                <th>Gender</th>
                 <th>RFC</th>
             </tr>
         </thead>
@@ -35,9 +35,9 @@
             @foreach($clients as $client )
             <tr>
                 <th>{{ $client->id }}</th>
-                <th>{{ $client->nombre }}</th>
-                <th>{{ $client->telefono }}</th>
-                <th>{{ $client->sexo }}</th>
+                <th>{{ $client->name }}</th>
+                <th>{{ $client->phone }}</th>
+                <th>{{ $client->gender }}</th>
                 <th>{{ $client->rfc }}</th>
             </tr>
             @endforeach

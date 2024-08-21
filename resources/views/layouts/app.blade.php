@@ -77,25 +77,31 @@
                 </div>
             </div>
         </nav>
+
+        @auth
+
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+    
+
         <div class="container-fluid">
-        <a href="/inicio" class="btn btn-warning">Inicio</a>
+        <a href="/inicio" class="btn btn-warning">Home</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="/cliente">Clientes</a>
+                        <a class="nav-link" href="/cliente">Clients</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/modelo">Modelos</a>
+                        <a class="nav-link" href="/modelo">Models</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/vehiculo">Vehiculos</a>
+                        <a class="nav-link" href="/vehiculo">Vehicles</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/usuario">Usuarios</a>
+                        <a class="nav-link" href="/usuario">Users</a>
                     </li>
 
                 </ul>
@@ -103,11 +109,12 @@
             
             <form action="{{ route('logout') }}" method="POST">
     @csrf
-    <button type="submit" class="btn btn-danger">Cerrar sesión</button>
+    <button type="submit" class="btn btn-danger">Log Out</button>
 </form>
+
         </div>
     </nav>
-    
+    @endauth
         <main class="py-4">
             @yield('content')
         </main>

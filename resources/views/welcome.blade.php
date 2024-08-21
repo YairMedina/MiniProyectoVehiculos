@@ -17,22 +17,30 @@
     </head>
     <body class="antialiased">
         <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
+            
             @if (Route::has('login'))
                 <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
                     @auth
                         <a href="{{ url('/home') }}" class=" btn btn-success">Home</a>
                         <a href="{{ url('/inicio') }}" class=" btn btn-success">Inicio</a>
                     @else
-                        <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
+                        <a href="{{ route('login') }}" class=" btn btn-success">Log in</a>
 
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
+                        @if (Route::has('register'))    
+                            <a href="{{ route('register') }}" class="btn btn-success">Register</a>
                         @endif
+                          
+                            <a href="{{ url('inicio') }}" class="btn btn-warning">Home</a>
+                
                     @endauth
+                   
+                 
                 </div>
             @endif
+            <!-- <a href="{{ url ('welcome') }}" class="btn btn-warning">Home</a>     -->
 
             <style>
+                
         /* Estilos personalizados para la pantalla de inicio */
         .hero-section {
             background-image: url('{{ asset('images/DSC0539.jpg') }}'); 
@@ -59,9 +67,10 @@
     </style>    
            <section class="hero-section">
         <div class="hero-text">
-            <h1 class="display-4">Renta de Vehículos</h1>
-            <p class="lead">Encuentra el vehículo perfecto para tu viaje.</p>
-            <a href="/inicio" class="btn btn-warning btn-lg">Ver Nuestros Vehículos</a>
+            <h1 class="display-4">VEHICLE RENTAL</h1>
+            <p class="lead">Find the perfect vehicle for your trip.</p>
+            <a href="/inicio" class="btn btn-warning btn-lg">View Our Vehicles</a>
+           
         </div>
     </section>
                 </div>
