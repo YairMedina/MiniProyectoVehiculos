@@ -18,7 +18,7 @@ class UsersTableSeeder extends Seeder
         DB::table('users')->insert([
             'name' => 'Yair',
             'email' => 'Ymedina388@gmail.com',
-            'password' => Hash::make('Ymedina388'), // Asegúrate de encriptar la contraseña
+            'password' => Hash::make('Ymedina388'), // Admin
             'created_at' => now(),
             'updated_at' => now()
         ]);
@@ -26,7 +26,7 @@ class UsersTableSeeder extends Seeder
         DB::table('users')->insert([
             'name' => 'Cliente',
             'email' => 'Yair_medina0510@hotmail.com',
-            'password' => Hash::make('Yayo0612'), // Asegúrate de encriptar la contraseña
+            'password' => Hash::make('Yayo0612'), // CLient
             'created_at' => now(),
             'updated_at' => now()
         ]);

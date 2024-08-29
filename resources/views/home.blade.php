@@ -23,36 +23,33 @@
     </div>
 </div>
 
-<SCRipt>
-console.log("hola")
-// Configurar la URL de la solicitud
-const url = '/ventana';
+<script>
 
-// Configurar la solicitud con fetch
+
 fetch(url, {
   method: 'GET',
   headers: {
     'Content-Type': 'application/json',
-    'X-CSRF-TOKEN': '{{ csrf_token() }}'  // Asegúrate de incluir el token CSRF de Laravel aquí
+    'X-CSRF-TOKEN': '{{ csrf_token() }}'  
   }
 })
 .then(response => {
   if (response.ok) {
-    // Si la respuesta es exitosa, convertir la respuesta a JSON o texto según corresponda
+   
     return response.json();  // Para respuesta JSON
-    // return response.text(); // Para respuesta en texto
+
   }
-  throw new Error('Hubo un problema con la solicitud.');
+  throw new Error('Error in request');
 })
 .then(data => {
-  // Manejar los datos recibidos
-  console.log('Respuesta:', data);
+ 
+  console.log('Answer:', data);
 })
 .catch(error => {
-  // Capturar y manejar errores de red o de la solicitud
+  
   console.error('Error:', error);
 });
 
 
-</SCRipt>
+</script>
 @endsection

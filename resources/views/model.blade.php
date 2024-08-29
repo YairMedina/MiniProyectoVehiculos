@@ -6,26 +6,26 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="image-text-section">
-                <h2 class="display-3 text-center">"MODELOS DE VEHICULOS"</h2><br>
+                <h2 class="display-3 text-center">"VEHICLE MODELS"</h2><br>
                     <div class="text-content">
                         
                         <p class="lead">
-                        Un Módulo de Modelos de Vehículos es una sección específica dentro de un sistema de gestión de renta de vehículos que se encarga de manejar toda la información relacionada con los diferentes modelos de vehículos disponibles para alquiler. Este módulo facilita la organización, visualización y gestión de los vehículos ofrecidos en la plataforma.
+                        A Vehicle Models Module is a specific section within a vehicle rental management system that handles all the information related to the different vehicle models available for rental. This module facilitates the organization, visualization, and management of the vehicles offered on the platform.
                         </p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <h1 class="text-center">Listado de Modelos</h1>
+    <h1 class="text-center">LIST OF MODELS</h1>
     <table class="table table-striped">
         <thead>
             <tr>
                 <th>ID</th>
-                <th>Nombre</th>
-                <th>Año</th>
+                <th>Name</th>
+                <th>Year</th>
                 <th>Color</th>
-                <th>Cilindros</th>
+                <th>cylinders</th>
             </tr>
         </thead>
         <tbody>

@@ -27,15 +27,15 @@ Route::POST('/asignar-role', [App\Http\Controllers\HomeController::class, 'asign
 
 
 Route::middleware(['role:admin'])->group(function () {
-    Route::get('/usuario', [App\Http\Controllers\UserController::class, 'user'])->name('usuario');
+    Route::get('/user', [App\Http\Controllers\UserController::class, 'user'])->name('user');
 
-    Route::get('/cliente', [App\Http\Controllers\ClientController::class, 'client'])->name('cliente');
+    Route::get('/client', [App\Http\Controllers\ClientController::class, 'client'])->name('client');
 
-    Route::get('/vehiculo', [App\Http\Controllers\VehicleController::class, 'index'])->name('vehiculo');
+    Route::get('/vehicle', [App\Http\Controllers\VehicleController::class, 'index'])->name('vehicle');
 
 
 });
 
 Route::middleware(['role:cliente'])->group(function () {
-    Route::get('/modelo', [App\Http\Controllers\ModelController::class, 'model'])->name('modelo');
+    Route::get('/model', [App\Http\Controllers\ModelController::class, 'model'])->name('modelo');
 });

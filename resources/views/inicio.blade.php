@@ -21,7 +21,7 @@
             <div class="col-md-12">
                 <div class="image-text-section">
                 <h2 class="display-4 text-center">"VEHICLE RENTAL"</h2><br>
-                    <img src="{{ asset('images/mustang.jpeg') }}" alt="Imagen descriptiva" class="img-fluid">
+                    <img src="{{ asset('images/mustang.jpeg') }}" class="img-fluid">
                     <div class="text-content">
                         
                         <p class="lead">
@@ -35,11 +35,11 @@
 
 
         <div class="container mt-5">
-            <h1 class="text-center mb-4">Tipos de Vehículos</h1> <br>
+            <h1 class="text-center mb-4">TYPES OF VEHICLES</h1> <br>
             <div class="row">
                 <div class="col-md-4 vehicle-card">
                     <div class="card">
-                        <img src="{{ asset('images/deportivos.jpg') }}" class="card-img-top vehicle-img" alt="Ferrari">
+                        <img src="{{ asset('images/deportivos.jpg') }}" class="card-img-top vehicle-img" >
                         <div class="card-body">
                             <h5 class="card-title">SPORTS</h5>
                             <p class="card-text">Sports cars are vehicles designed to deliver high performance, speed, and an exciting driving experience. They often feature powerful engines, finely tuned suspension for precise handling, and a lightweight structure to enhance agility. Their design is usually aerodynamic to minimize air resistance and maximize stability at high speeds.</p>
@@ -48,7 +48,7 @@
                 </div>
                 <div class="col-md-4 vehicle-card">
                     <div class="card">
-                        <img src="{{ asset('images/camioneta.jpeg') }}" class="card-img-top vehicle-img" alt="Motocicleta">
+                        <img src="{{ asset('images/camioneta.jpeg') }}" class="card-img-top vehicle-img" >
                         <div class="card-body">
                             <h5 class="card-title"> ALL-TERRAIN</h5>
                             <p class="card-text">These vehicles typically have higher ground clearance, allowing them to overcome obstacles such as rocks and logs without damaging the chassis. Four-wheel drive (4x4) is a common feature in off-road vehicles, enhancing grip and control on slippery or uneven surfaces. Additionally, they often come equipped with reinforced suspensions and tires specifically designed to withstand wear and provide traction in adverse conditions.</p>
@@ -57,7 +57,7 @@
                 </div>
                 <div class="col-md-4 vehicle-card">
                     <div class="card">
-                        <img src="{{ asset('images/suburban.jpg') }}" class="card-img-top vehicle-img" alt="Camión">
+                        <img src="{{ asset('images/suburban.jpg') }}" class="card-img-top vehicle-img" >
                         <div class="card-body">
                             <h5 class="card-title">EXECUTIVE</h5>
                             <p class="card-text">

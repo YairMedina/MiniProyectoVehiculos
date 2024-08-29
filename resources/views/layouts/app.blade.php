@@ -92,16 +92,16 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="/cliente">Clients</a>
+                        <a class="nav-link" href="/client">Clients</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/modelo">Models</a>
+                        <a class="nav-link" href="/model">Models</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/vehiculo">Vehicles</a>
+                        <a class="nav-link" href="/vehicle">Vehicles</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/usuario">Users</a>
+                        <a class="nav-link" href="/user">Users</a>
                     </li>
 
                 </ul>
