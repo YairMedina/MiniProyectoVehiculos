@@ -41,7 +41,7 @@ The User Roles Module is a tool on our website that allows you to manage what us
                 <th>{{ $use->name }}</th>
                 <th>{{ $use->email }}</th>
                 <th> <div class="container">
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-id="{{ $use->id }}" onclick="abrirModal(this)">Permissions</button>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-id="{{ $use->id }}" onclick="openModal(this)">Permissions</button>
     </div></th>
             </tr>
 
@@ -65,12 +65,12 @@ The User Roles Module is a tool on our website that allows you to manage what us
         </button>
       </div>
       <div class="modal-body">
-      <input type="text" class="form-control" id="idusuario" readonly placeholder="Ingresa algo">
-      <input type="text" class="form-control" id="idrol" placeholder="Ingresa Rol">
+      <input type="text" class="form-control" id="iduser" readonly>
+      <input type="text" class="form-control" id="idrol" >
     </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary" onclick="asignarPermiso()">Save</button>
+        <button type="button" class="btn btn-primary" onclick="assignPermissions()">Save</button>
         
       </div>
     </div>
@@ -78,29 +78,30 @@ The User Roles Module is a tool on our website that allows you to manage what us
 </div>
     <script>
 
-function abrirModal(button){
+function openModal(button){
 
     var userId = button.getAttribute('data-id');
-    console.log('ID del usuario:', userId);
-    $('#idusuario').val(userId)
+    console.log('ID User:', userId);
+    $('#iduser').val(userId)
     $('#exampleModal').modal("show")
 }
 
-function asignarPermiso(){
+function assignPermissions(){
 
     $.ajax({
-                url: 'asignar-role', // Ruta definida en Laravel
+                url: 'assign-role', // Ruta definida en Laravel
                 type: 'POST',
                 data: {
                     _token: '{{ csrf_token() }}',
-                    id:   $('#idusuario').val(),
+                    id:   $('#iduser').val(),
                     rol: $('#idrol').val(),
                 },
                 success: function(response) {
                     console.log('Respuesta del servidor:', response);
-                    alert('Rol asignado con éxito');s                },
+                    alert('Role assigned successfully');
+                               },
                 error: function(xhr, status, error) {
-                    console.error('Error en la solicitud:', error);
+                    console.error('Error in request:', error);
                     // Manejar errores
                 }
             });

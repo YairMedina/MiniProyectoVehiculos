@@ -23,7 +23,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 
 Auth::routes();
-Route::POST('/asignar-role', [App\Http\Controllers\HomeController::class, 'asignaroles']);
+Route::POST('/assign-role', [App\Http\Controllers\HomeController::class, 'assignrols']);
 
 
 Route::middleware(['role:admin'])->group(function () {
