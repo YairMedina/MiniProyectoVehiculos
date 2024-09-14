@@ -12,4 +12,11 @@ class Vehicle extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
 
+    protected $fillable = [
+        'name',
+        'plate',
+        'phone',
+        'model'
+
+    ];
 }

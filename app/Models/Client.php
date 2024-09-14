@@ -12,4 +12,14 @@ class Client extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
 
+
+    protected $fillable = [
+        'name',
+        'phone',
+        'gender',
+        'rfc'
+
+    ];
+
+
 }

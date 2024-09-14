@@ -28,9 +28,9 @@ class HomeController extends Controller
         return view('home');
     }
 
-    public function index_inicio()
+    public function index_start()
     {
-        return view('inicio');
+        return view('start');
     }
 
     public function assignrols(Request $request)
