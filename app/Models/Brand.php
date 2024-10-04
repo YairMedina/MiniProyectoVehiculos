@@ -12,4 +12,12 @@ class Brand extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
 
+    protected $fillable = [
+        'name',
+        'year',
+        'color',
+        'cylinders'
+
+    ];
+
 }
