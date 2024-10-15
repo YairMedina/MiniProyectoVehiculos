@@ -18,17 +18,6 @@ use App\Http\Controllers\AuthController;
 */
 
 
-Route::get('vehicle', function () {
-    return response()->json(['message' => 'Vehicles']);
-});
-
-Route::get('client', function () {
-    return response()->json(['message' => 'clients']);
-});
-
-Route::get('model', function () {
-    return response()->json(['message' => 'models']);
-});
 
 
 Route::post('/login', [AuthController::class, 'login']);
@@ -60,9 +49,7 @@ Route::middleware('auth:sanctum')->group(function () {
 
 });
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+
 
 
 
