@@ -2,62 +2,66 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\Brand;
+use App\Repository\ModelRepositoryInterface;
+use Illuminate\Http\Request;
 
 class ModelController extends Controller
 {
+
+    private ModelRepositoryInterface $modelRepository;
+
+    public function __construct(ModelRepositoryInterface $modelRepository)
+    {
+        $this->modelRepository = $modelRepository;
+    }
+
     public function model()
     {
-        $models = Brand::all();
-        return view('model', ['models' => $models]);
+        $model = $this->modelRepository->all();
+        return view('Model', ['models' => $model]);
     }
 
-
-
-    public function show($id)
+    public function show($modelId)
     {
-    
-        $data = Brand::find($id);
         return response()->json([
+            'data' => $this->modelRepository->findModel($modelId),
             'status' => 'success',
             'message' => 'exito',
-            'data' => $data
         ]);
+
     }
-    
+
     public function store(Request $request)
     {
-        $data = Brand::create($request->all());
+        $data = $this->modelRepository->createModel($request->all());
         return response()->json([
             'status' => 'success',
             'message' => 'exito',
-            'data' => $data
+            'data' => $data,
         ]);
-    
+
     }
-    
+
     public function update(Request $request, $id)
     {
-        $model = Brand::findOrFail($id);
-        $model->update($request->all());
-    
+        $model = $this->modelRepository->updateModel($id, $request->all());
+
         return response()->json([
             'status' => 'success',
             'message' => 'exito',
-            'data' => $model
+            'data' => $model,
         ]);
     }
-    
+
     public function delete($id)
     {
-       $data = Brand::findOrFail($id)->delete();
+        $data = Brand::findOrFail($id)->delete();
         return response()->json([
             'status' => 'success',
             'message' => 'exito',
-            'data' => $data
+            'data' => $data,
         ]);
     }
-    
 
 }
