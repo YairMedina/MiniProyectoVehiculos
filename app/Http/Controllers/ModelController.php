@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Resources\ModelResource;
 use App\Models\Brand;
 use App\Repository\ModelRepositoryInterface;
 use Illuminate\Http\Request;
@@ -19,13 +20,15 @@ class ModelController extends Controller
     public function model()
     {
         $model = $this->modelRepository->all();
-        return view('Model', ['models' => $model]);
+        return view('Model', ['models' => ModelResource::collection($model)]);
     }
+
 
     public function show($modelId)
     {
+        $data = $this->modelRepository->findModel($modelId);
         return response()->json([
-            'data' => $this->modelRepository->findModel($modelId),
+            'data' => new ModelResource($data),
             'status' => 'success',
             'message' => 'exito',
         ]);
@@ -38,7 +41,7 @@ class ModelController extends Controller
         return response()->json([
             'status' => 'success',
             'message' => 'exito',
-            'data' => $data,
+            'data' => new ModelResource($data),
         ]);
 
     }
@@ -50,18 +53,26 @@ class ModelController extends Controller
         return response()->json([
             'status' => 'success',
             'message' => 'exito',
-            'data' => $model,
+            'data' => new ModelResource($model),
         ]);
     }
+
+
 
     public function delete($id)
     {
-        $data = Brand::findOrFail($id)->delete();
-        return response()->json([
-            'status' => 'success',
-            'message' => 'exito',
-            'data' => $data,
-        ]);
+        $deleted = $this->modelRepository->deleteModel($id);
+    
+        if ($deleted) {
+            return response()->json([
+                'status' => 'success',
+                'message' => 'Delete client succesful'
+            ]);
+        } else {
+            return response()->json([
+                'status' => 'error',
+                'message' => 'Error when delete client'
+            ], 400);
+        }
     }
-
 }

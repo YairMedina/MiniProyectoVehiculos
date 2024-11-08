@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Resources\ClientResource;
 use App\Models\Client;
 use App\Repository\ClientRepositoryInterface;
 use Illuminate\Http\Request;
@@ -19,13 +20,14 @@ class ClientController extends Controller
     public function client()
     {
         $client = $this->clientRepository->all();
-        return view('Client', ['clients' => $client]);
+        return view('Client', ['clients' => ClientResource::collection($client)]);
     }
 
     public function show($clientId)
     {
+        $data = $this->clientRepository->findClient($clientId);
         return response()->json([
-            'data' => $this->clientRepository->findClient($clientId),
+            'data' => new ClientResource($data),
             'status' => 'success',
             'message' => 'exito',
         ]);
@@ -38,7 +40,7 @@ class ClientController extends Controller
         return response()->json([
             'status' => 'success',
             'message' => 'exito',
-            'data' => $data,
+            'data' => new ClientResource($data),
         ]);
 
     }
@@ -50,18 +52,25 @@ class ClientController extends Controller
         return response()->json([
             'status' => 'success',
             'message' => 'exito',
-            'data' => $client,
+            'data' => new ClientResource($client),
         ]);
     }
 
     public function delete($id)
     {
-        $data = Client::findOrFail($id)->delete();
-        return response()->json([
-            'status' => 'success',
-            'message' => 'exito',
-            'data' => $data,
-        ]);
+        $deleted = $this->clientRepository->deleteClient($id);
+
+        if ($deleted) {
+            return response()->json([
+                'status' => 'success',
+                'message' => 'Delete client succesful',
+            ]);
+        } else {
+            return response()->json([
+                'status' => 'error',
+                'message' => 'Error when delete client',
+            ], 400);
+        }
     }
 
 }

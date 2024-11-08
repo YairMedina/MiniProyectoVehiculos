@@ -11,5 +11,6 @@ interface ClientRepositoryInterface
     public function createClient(array $data): bool;
     public function findClient($id): ?Model;
     public function updateClient($id, array $data): bool;
+    public function deleteClient($id): bool;
 
 }

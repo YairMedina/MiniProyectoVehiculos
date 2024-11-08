@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Vehicle;
+use App\Http\Resources\VehicleResource;
 use App\Repository\VehicleRepositoryInterface;
 use Illuminate\Http\Request;
 
@@ -19,13 +19,14 @@ class VehicleController extends Controller
     public function index()
     {
         $vehicles = $this->vehicleRepository->all();
-        return view('Vehicle', ['vehicles' => $vehicles]);
+        return view('Vehicle', ['vehicles' => VehicleResource::collection($vehicles)]);
     }
 
     public function show($vehicleId)
     {
+        $data = $this->vehicleRepository->findVehicle($vehicleId);
         return response()->json([
-            'data' => $this->vehicleRepository->findVehicle($vehicleId),
+            'data' => new VehicleResource($data),
             'status' => 'success',
             'message' => 'exito',
         ]);
@@ -38,7 +39,7 @@ class VehicleController extends Controller
         return response()->json([
             'status' => 'success',
             'message' => 'exito',
-            'data' => $data,
+            'data' => new VehicleResource($data),
         ]);
 
     }
@@ -50,18 +51,25 @@ class VehicleController extends Controller
         return response()->json([
             'status' => 'success',
             'message' => 'exito',
-            'data' => $vehicle,
+            'data' => new VehicleResource($vehicle),
         ]);
     }
 
     public function delete($id)
     {
-        $data = Vehicle::findOrFail($id)->delete();
-        return response()->json([
-            'status' => 'success',
-            'message' => 'exito',
-            'data' => $data,
-        ]);
+        $deleted = $this->vehicleRepository->deleteVehicle($id);
+
+        if ($deleted) {
+            return response()->json([
+                'status' => 'success',
+                'message' => 'Delete client succesful',
+            ]);
+        } else {
+            return response()->json([
+                'status' => 'error',
+                'message' => 'Error when delete client',
+            ], 400);
+        }
     }
 
 }

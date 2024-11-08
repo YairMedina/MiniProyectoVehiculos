@@ -24,7 +24,7 @@ class ClientRepository implements ClientRepositoryInterface
 
     public function createClient(array $data): bool
     {
-        return $this->model->create($data) ? true : false;
+        return $this->model->create($data);
     }
 
     public function findClient($id): ?Client
@@ -36,9 +36,19 @@ class ClientRepository implements ClientRepositoryInterface
     {
         $model = $this->model->find($id);
         if ($model) {
-            return $model->update($data) ? true : false;
+            return $model->update($data);
         }
         return false;
     }
+
+    public function deleteClient($id): bool
+    {
+        $model = $this->model->find($id);
+        if ($model) {
+            return $model->delete();
+        }
+        return false;
+    }
+
 
 }

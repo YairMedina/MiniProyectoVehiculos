@@ -11,5 +11,6 @@ interface VehicleRepositoryInterface
     public function createVehicle(array $data): bool;
     public function findVehicle($id): ?Model;
     public function updateVehicle($id, array $data): bool;
+    public function deleteVehicle($id): bool;
 
 }

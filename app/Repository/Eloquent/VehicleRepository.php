@@ -24,7 +24,7 @@ class VehicleRepository implements VehicleRepositoryInterface
 
     public function createVehicle(array $data): bool
     {
-        return $this->model->create($data) ? true : false;
+        return $this->model->create($data);
     }
 
     public function findVehicle($id): ?Model
@@ -36,7 +36,16 @@ class VehicleRepository implements VehicleRepositoryInterface
     {
         $vehicle = $this->model->find($id);
         if ($vehicle) {
-            return $vehicle->update($data) ? true : false;
+            return $vehicle->update($data);
+        }
+        return false;
+    }
+
+    public function deleteVehicle($id): bool
+    {
+        $model = $this->model->find($id);
+        if ($model) {
+            return $model->delete();
         }
         return false;
     }

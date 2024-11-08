@@ -11,5 +11,6 @@ interface ModelRepositoryInterface
     public function createModel(array $data): bool;
     public function findModel($id): ?Model;
     public function updateModel($id, array $data): bool;
+    public function deleteModel($id): bool;
 
 }

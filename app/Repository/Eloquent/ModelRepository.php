@@ -24,7 +24,7 @@ class ModelRepository implements ModelRepositoryInterface
 
     public function createModel(array $data): bool
     {
-        return $this->model->create($data) ? true : false;
+        return $this->model->create($data);
     }
 
     public function findModel($id): ?Brand
@@ -36,9 +36,17 @@ class ModelRepository implements ModelRepositoryInterface
     {
         $model = $this->model->find($id);
         if ($model) {
-            return $model->update($data) ? true : false;
+            return $model->update($data);
         }
         return false;
     }
 
+    public function deleteModel($id): bool
+    {
+        $model = $this->model->find($id);
+        if ($model) {
+            return $model->delete();
+        }
+        return false;
+    }
 }
