@@ -35,19 +35,13 @@ class VehicleRepository implements VehicleRepositoryInterface
     public function updateVehicle($id, array $data): bool
     {
         $vehicle = $this->model->find($id);
-        if ($vehicle) {
-            return $vehicle->update($data);
-        }
-        return false;
+        return $vehicle->update($data);
     }
 
     public function deleteVehicle($id): bool
     {
         $model = $this->model->find($id);
-        if ($model) {
-            return $model->delete();
-        }
-        return false;
+        return $model->delete();
     }
 
 }

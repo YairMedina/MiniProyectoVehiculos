@@ -35,18 +35,12 @@ class ModelRepository implements ModelRepositoryInterface
     public function updateModel($id, array $data): bool
     {
         $model = $this->model->find($id);
-        if ($model) {
-            return $model->update($data);
-        }
-        return false;
+        return $model->update($data);
     }
 
     public function deleteModel($id): bool
     {
         $model = $this->model->find($id);
-        if ($model) {
-            return $model->delete();
-        }
-        return false;
+        return $model->delete();
     }
 }

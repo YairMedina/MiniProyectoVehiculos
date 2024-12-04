@@ -35,19 +35,15 @@ class ClientRepository implements ClientRepositoryInterface
     public function updateClient($id, array $data): bool
     {
         $model = $this->model->find($id);
-        if ($model) {
-            return $model->update($data);
-        }
-        return false;
+
+        return $model->update($data);
+       
     }
 
     public function deleteClient($id): bool
     {
         $model = $this->model->find($id);
-        if ($model) {
-            return $model->delete();
-        }
-        return false;
+        return $model->delete();
     }
 
 
