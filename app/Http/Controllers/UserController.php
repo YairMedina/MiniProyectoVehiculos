@@ -9,7 +9,7 @@ class UserController extends Controller
 {
     public function user()
     {
-        $usuarios = User::all();
-        return view('usuario', ['usuarios' => $usuarios]);
+        $users = User::all();
+        return view('user', ['users' => $users]);
     }
 }

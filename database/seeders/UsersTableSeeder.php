@@ -24,7 +24,7 @@ class UsersTableSeeder extends Seeder
         ]);
 
         DB::table('users')->insert([
-            'name' => 'Cliente',
+            'name' => 'Client',
             'email' => 'Yair_medina0510@hotmail.com',
             'password' => Hash::make('Yayo0612'), // CLient
             'created_at' => now(),
@@ -39,7 +39,7 @@ class UsersTableSeeder extends Seeder
         ]);
 
         DB::table('roles')->insert([
-            'name' => 'cliente',
+            'name' => 'client',
             'guard_name' => 'web',
             'created_at' => now(),
             'updated_at' => now()

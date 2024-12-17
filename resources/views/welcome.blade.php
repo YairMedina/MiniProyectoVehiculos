@@ -22,7 +22,7 @@
                 <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
                     @auth
                         <a href="{{ url('/home') }}" class=" btn btn-success">Home</a>
-                        <a href="{{ url('/inicio') }}" class=" btn btn-success">Inicio</a>
+                        <a href="{{ url('/start') }}" class=" btn btn-success">Start</a>
                     @else
                         <a href="{{ route('login') }}" class=" btn btn-success">Log in</a>
 
@@ -30,7 +30,7 @@
                             <a href="{{ route('register') }}" class="btn btn-success">Register</a>
                         @endif
                           
-                            <a href="{{ url('inicio') }}" class="btn btn-warning">Home</a>
+                            <a href="{{ url('start') }}" class="btn btn-warning">Home</a>
                 
                     @endauth
                    
@@ -69,7 +69,7 @@
         <div class="hero-text">
             <h1 class="display-4">VEHICLE RENTAL</h1>
             <p class="lead">Find the perfect vehicle for your trip.</p>
-            <a href="/inicio" class="btn btn-warning btn-lg">View Our Vehicles</a>
+            <a href="/start" class="btn btn-warning btn-lg">View Our Vehicles</a>
            
         </div>
     </section>

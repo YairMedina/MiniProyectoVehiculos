@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/inicio', [App\Http\Controllers\HomeController::class, 'index_inicio'])->name('inicio');
+Route::get('/start', [App\Http\Controllers\HomeController::class, 'index_start'])->name('start');
 Route::get('/', function () {
     return view('welcome');
 });
@@ -23,19 +23,19 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 
 Auth::routes();
-Route::POST('/assign-role', [App\Http\Controllers\HomeController::class, 'assignrols']);
+Route::POST('assign-role', [App\Http\Controllers\HomeController::class, 'assignrols']);
 
 
 Route::middleware(['role:admin'])->group(function () {
-    Route::get('/user', [App\Http\Controllers\UserController::class, 'user'])->name('user');
+    Route::get('user', [App\Http\Controllers\UserController::class, 'user'])->name('user');
 
-    Route::get('/client', [App\Http\Controllers\ClientController::class, 'client'])->name('client');
+    Route::get('client', [App\Http\Controllers\ClientController::class, 'client'])->name('client');
 
-    Route::get('/vehicle', [App\Http\Controllers\VehicleController::class, 'index'])->name('vehicle');
+    Route::get('vehicle', [App\Http\Controllers\VehicleController::class, 'index'])->name('vehicle');
 
 
 });
 
-Route::middleware(['role:cliente'])->group(function () {
-    Route::get('/model', [App\Http\Controllers\ModelController::class, 'model'])->name('modelo');
+Route::middleware(['role:client'])->group(function () {
+    Route::get('/model', [App\Http\Controllers\ModelController::class, 'model'])->name('model');
 });
